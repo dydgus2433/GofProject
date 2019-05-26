@@ -1,7 +1,7 @@
 package y.h.lee.bridge;
 
 public class StringDisplayImpl extends DisplayImpl{
-	private String string;
+	protected String string;
 	private int width;
 	
 	
