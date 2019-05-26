@@ -1,35 +1,28 @@
 package y.h.lee.bridge;
 
-public class CharDisplayImpl extends StringDisplayImpl{
+public class CharDisplayImpl extends DisplayImpl{
 	private char first;
 	private char second;
-	private int multi;
-	private int count = 0;
-	public CharDisplayImpl(String string, char first, char second, int multi) {
-		super(string);
+	private char body;
+	public CharDisplayImpl(char first, char body,  char second) {
 		this.first = first;
 		this.second = second;
-		this.multi = multi;
+		this.body = body;
 	}
 
 	@Override
 	public void rawOpen() {
+		System.out.print(first);
 	}
 
 	@Override
 	public void rawPrint() {
-		String str = "";
-		for(int i =0; i < count; i++) {
-			str += string;
-		}
-		System.out.println(first + str + second);
-		count++;
+		System.out.print(body);
 	}
 
 	@Override
 	public void rawClose() {
-		// TODO Auto-generated method stub
-		
+		System.out.println(second);
 	}
 	
 	

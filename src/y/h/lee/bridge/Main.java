@@ -14,7 +14,9 @@ public class Main {
 		Display d5 = new Display(new FileDisplayImpl("Greeting.html"));
 		d5.display();
 		
-		CountDisplay d6 = new CountDisplay(new CharDisplayImpl("##",'<','>',5));
-		d6.multiDisplay(5);
+		IncreaseDisplay d6 = new IncreaseDisplay(new CharDisplayImpl('<','*','>'),1);
+		d6.increaseDisplay(5);
+		IncreaseDisplay d7 = new IncreaseDisplay(new CharDisplayImpl('<','#','>'),2);
+		d7.increaseDisplay(4);
 	}
 }
